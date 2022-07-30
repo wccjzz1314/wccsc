@@ -29,7 +29,36 @@
       <h1>江贞贞我爱你</h1>
     </div>
     <div class="text">
-      <h1>我们在一起一个月啦！</h1>
+      <h1><div class="showTime"></div>
+<script>
+  var t = null;
+  t = setTimeout(time, 1000); //開始运行
+  function time() {
+    clearTimeout(t); //清除定时器
+    dt = new Date();
+    var y = dt.getFullYear()-2022;
+    var mt = dt.getMonth() + 1-7;
+    var day = dt.getDate();
+    var h = dt.getHours(); //获取时
+    var m = dt.getMinutes(); //获取分
+    var s = dt.getSeconds(); //获取秒
+    document.querySelector(".showTime").innerHTML =
+      "我们已经在一起：" +
+      y +
+      "年" +
+      mt +
+      "月" +
+      day +
+      "天" +
+      h +
+      "小时" +
+      m +
+      "分钟" +
+      s +
+      "秒";
+    t = setTimeout(time, 1000); //设定定时器，循环运行
+  }
+</script></h1>
     </div>
     
     <div class="container"></div>
